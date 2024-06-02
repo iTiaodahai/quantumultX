@@ -1,4 +1,4 @@
-# >国内分流规则包含：WeChat/Apple/滴滴出行/高德地图/阿里/京东/美团/携程
+# >国内分流规则包含：WeChat/Apple/滴滴出行/高德地图/阿里/京东/美团/携程/自定义分流规则
 # >国外分流规则包含：Google/YouTube/Talkatone/Telegram/Twitter/Twitch/OpenAI/Netflix/Microsoft/PayPal/Github/Facebook/Instagram/Disney
 # >拦截分流规则包含：滴滴出行/屏蔽IOS系统升级
 
@@ -3527,6 +3527,7 @@ HOST-SUFFIX,neixin.cn,direct
 HOST-SUFFIX,sankuai.com,direct
 
 # >携程
+
 HOST-SUFFIX,c-ctrip.com,direct
 HOST-SUFFIX,colinker.com,direct
 HOST-SUFFIX,ctrip.cn,direct
@@ -3557,6 +3558,12 @@ HOST-SUFFIX,trip.com,direct
 HOST-SUFFIX,tripcdn.com,direct
 HOST-SUFFIX,vipdlt.com,direct
 
+# >自定义分流规则
+
+HOST-SUFFIX,timecn.cn,direct
+HOST-SUFFIX,5266ys.com,direct
+HOST-KEYWORD,5721004,direct
+HOST-WILDCARD,*hls.live-video.net,direct
 
 # >国外分流规则
 
