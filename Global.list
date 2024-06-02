@@ -1,4 +1,4 @@
-# >国内分流规则包含：WeChta/Apple/滴滴出行/高德地图
+# >国内分流规则包含：WeChta/Apple/滴滴出行/高德地图/自定义分流规则
 # >国外分流规则包含：Google/YouTube/Talkatone/Telegram/Twitter/Twitch/OpenAI/Netflix/Microsoft/PayPal/Github/Facebook/Instagram/Disney
 # >拦截分流规则包含：滴滴出行/屏蔽IOS系统升级
 
@@ -1958,6 +1958,9 @@ HOST-SUFFIX,amapauto.com,direct
 HOST-SUFFIX,anav.com,direct
 HOST-SUFFIX,autonavi.com,direct
 HOST-SUFFIX,gaode.com,direct
+
+# >自定义分流规则
+HOST-SUFFIX,taobao.com,direct
 
 # >国外分流规则
 
