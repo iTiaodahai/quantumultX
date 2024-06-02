@@ -1,115 +1,86 @@
 # >广告屏蔽:知乎/滴滴出行/微博
 
+################################################################################################################################################################
 # >知乎去广告
 # >引用来源：https://github.com/blackmatrix7/ios_rule_script/blob/master/script/zheye/zheye.snippet
 
 ^https?:\/\/118\.89\.204\.198 url reject-dict
 ^https?:\/\/103\.41\.167\.237 url reject-dict
 ^https?:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6 url reject-200
-
 # 屏蔽下发的配置，如皮肤等
 ^https?:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config url reject
-
 # 屏蔽我的页面开通会员的卡片
 # ^https?:\/\/api\.zhihu\.com\/unlimited\/go\/my_card url reject
-
 # 拦截开屏广告
 ^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? url reject-dict
 ^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2\? url reject-dict
-
 # 拦截品牌提问广告
 ^https?:\/\/api\.zhihu\.com\/brand\/question\/\d+/card\? url reject-dict
 ^https?:\/\/www\.zhihu\.com\/api\/v\d+\/brand\/question/\d+/card\? url reject-dict
-
 # 去除底部标签页关注人角标
 ^https?:\/\/api\.zhihu\.com\/moments\/tab_v2 url reject-dict
-
 # 去除消息通知角标
 ^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count) url reject-dict
-
 # 拦截回答下的卡片广告
 ^https?:\/\/www\.zhihu\.com\/api\/v\d\/answers\/\d+\/recommendations url reject-dict
-
 # 拦截应用内弹窗
 ^https?:\/\/api\.zhihu\.com\/me\/guides url reject-dict
-
 # 去除关注页最常访问
 ^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
-
 # 拦截推荐页顶部广告
 ^https?:\/\/api\.zhihu\.com\/api\/v4\/ecom_data\/config url reject-dict
-
 # 底栏加号的广告
 ^https?:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings url reject-dict
-
 # 推荐页搜索栏左侧图标
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading url reject-dict
-
 # 疑似推荐页内容更新红点
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/tag_config url reject-dict
-
 # 去除回答页的相关搜索
 ^https?:\/\/www\.zhihu\.com\/api\/v\d+\/search\/related_queries\/answer url reject-dict
-
 # 暂不清楚作用
 ^https?:\/\/api\.zhihu\.com\/commercial_api\/banners_v3\/app_topstory_banner url reject-dict
 ^https?:\/\/api\.zhihu\.com\/ad-style-service\/request url reject
-
 # 获取用户信息 - 隔离用户数据，开启本地会员等
 ^https?:\/\/api\.zhihu\.com\/people\/ url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 关键词屏蔽 - 解锁本地的关键词屏蔽功能，需要开启本地VIP
 ^https?:\/\/api\.zhihu\.com\/feed-root\/block url script-analyze-echo-response https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 优化软件配置 - 优化下发的配置文件来实现某些效果
 ^https?:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 ^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/config url script-analyze-echo-response https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/tab\/config url script-analyze-echo-response https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 用户信息 - 修改用户盐值
 ^https?:\/\/api\.zhihu\.com\/user-credit\/basis url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 关注页 - 内容优化及屏蔽转发的黑名单用户想法
 ^https?:\/\/api\.zhihu\.com\/moments_v3\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 推荐页 - 移除黑名单用户发布的文章、去除广告，及自定义一些屏蔽项目
 ^https:\/\/api\.zhihu\.com\/topstory\/recommend url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 黑名单页 - 同步黑名单数据
 ^https?:\/\/api\.zhihu\.com\/settings\/blocked_users url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 问题的回答列表 - 移除黑名单用户的回答、去除广告
 ^https?:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+ url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 回答信息流 - 移除黑名单用户的回答、去除广告
 ^https?:\/\/api\.zhihu\.com\/next-(data|bff|render) url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 回答页底部评论摘要 - 移除黑名单用户发表的评论
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/comment_v5\/answers\/\d+\/abstract_comment\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 评论页及子页面 - 去除黑名单用户发表的评论
 ^https?:\/\/api\.zhihu\.com\/(comment_v5\/)?(answers|comments?|articles|pins)\/\d+\/(root_|child_)?comments? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 消息页 - 折叠官方消息、屏蔽营销消息
 ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message) url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 
 # 回答页 - 内容优化，付费、营销、推广内容文首提醒
 ^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 回答页 - 屏蔽下翻出现的黑名单用户的回答
 ^https?:\/\/api\.zhihu\.com\/next\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 文章页 - 去除底部广告
 ^https?:\/\/www\.zhihu\.com\/api\/v\d\/articles\/\d+\/recommendation\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 热榜页 - 去除广告
 ^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists?(\?|\/) url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 搜索页 - 去除预置广告
 ^https?:\/\/api\.zhihu\.com\/search\/preset_words\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 
 hostname = 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226
 
+################################################################################################################################################################
 # >滴滴出行去广告
 # >引用来源：https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.snippet
 
@@ -129,6 +100,7 @@ hostname = 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,ww
 
 hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn ,api.udache.com ,123.207.209.*, 112.53.55.225,120.241.142.*,120.241.143.*,116.85.2.*,139.199.240.84
 
+################################################################################################################################################################
 # >微博去广告
 # >引用来源：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet
 
@@ -136,47 +108,33 @@ hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api
 
 # 似乎没用的请求，收集用户信息
 ^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload) Weibo url-and-header script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
-
 # 屏蔽首页左上角每日的弹窗tips
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily Weibo url-and-header reject-dict
-
 # 超话按钮的提示
 https://m?api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo Weibo url-and-header reject
-
 # 微博移除发现页广告
 ^https?://m?api.weibo.cn/2/search/(finder|container_timeline|container_discover) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-
 # 微博热搜页面广告
 ^https?://m?api.weibo.cn/2/(page|flowpage) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-
 # 微博话题页面广告
 https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-
 # 微博超话页面广告
 ^https:\/\/m?api\.weibo\.cn\/2\/statuses\/container_timeline_topicpage Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-
 # 微博超话tab页净化
 ^https:\/\/m?api\.weibo\.cn\/2\/statuses\/container_timeline_topic\?flowId Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-
 # 微博详情页面广告
 ^https?://m?api.weibo.cn/2/statuses/extend Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-
 # 微博最顶部的tab页分组
 ^https?://m?api.weibo.cn/2/groups/allgroups/v2 Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
-
 # 微博去广告以及去除各部分推广模块 - cherish
 ^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js
-
 # 删除微博开屏广告 - cherish
 ^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime Weibo url-and-header reject-dict
 ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
-
 # 自定义tab皮肤
 ^https://api.weibo.cn/2/!/client/light_skin Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
-
 # 非会员设置tab皮肤 - cherish
 ^https://new.vip.weibo.cn/littleskin/preview Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
-
 # 解锁微博会员APP图标
 ^https?://new\.vip\.weibo\.cn/aj/appicon/list Weibo url-and-header script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js
 
