@@ -3562,8 +3562,9 @@ HOST-SUFFIX,vipdlt.com,direct
 
 HOST-SUFFIX,timecn.cn,direct
 HOST-SUFFIX,5266ys.com,direct
+HOST-SUFFIX,hls.live-video.net,direct
 HOST-KEYWORD,5721004,direct
-HOST-WILDCARD,*hls.live-video.net,direct
+
 
 # >国外分流规则
 
