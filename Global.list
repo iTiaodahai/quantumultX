@@ -1961,6 +1961,7 @@ HOST-SUFFIX,gaode.com,direct
 
 # >自定义分流规则
 HOST-SUFFIX,taobao.com,direct
+HOST-SUFFIX,meituan.com,direct
 
 # >国外分流规则
 
