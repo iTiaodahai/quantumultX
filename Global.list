@@ -1,8 +1,9 @@
-# >国内分流规则包含：WeChta/Apple/滴滴出行
+# >国内分流规则包含：WeChta/Apple/滴滴出行/高德地图
 # >国外分流规则包含：Google/YouTube/Talkatone/Telegram/Twitter/Twitch/OpenAI/Netflix/Microsoft/PayPal/Github/Facebook/Instagram/Disney
 # >拦截分流规则包含：滴滴出行/屏蔽IOS系统升级
 
 # >国内直连分流规则
+# >补充ASN分流缺少的部分
 
 # >WeChat
 
@@ -1919,6 +1920,7 @@ IP-CIDR,63.92.224.0/19,苹果服务
 IP-CIDR,65.199.22.0/23,苹果服务
 
 # >滴滴出行
+
 HOST-SUFFIX,apptaxi.com.cn,direct
 HOST-SUFFIX,cxyule.com,direct
 HOST-SUFFIX,didi-food.com,direct
@@ -1944,6 +1946,18 @@ HOST-SUFFIX,juyanwenjuan.com,direct
 HOST-SUFFIX,udache.com,direct
 HOST-SUFFIX,xiaojuchefu.cn,direct
 HOST-SUFFIX,xiaojukeji.com,direct
+
+# >高德地图
+
+HOST-SUFFIX,a-map.cn,direct
+HOST-SUFFIX,a-map.co,direct
+HOST-SUFFIX,a-map.link,direct
+HOST-SUFFIX,a-map.vip,direct
+HOST-SUFFIX,amap.com,direct
+HOST-SUFFIX,amapauto.com,direct
+HOST-SUFFIX,anav.com,direct
+HOST-SUFFIX,autonavi.com,direct
+HOST-SUFFIX,gaode.com,direct
 
 # >国外分流规则
 
