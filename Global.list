@@ -1,4 +1,4 @@
-# >国内分流规则包含：WeChta/Apple/滴滴出行/高德地图/阿里/京东/美团
+# >国内分流规则包含：WeChta/Apple/滴滴出行/高德地图/阿里/京东/美团/携程
 # >国外分流规则包含：Google/YouTube/Talkatone/Telegram/Twitter/Twitch/OpenAI/Netflix/Microsoft/PayPal/Github/Facebook/Instagram/Disney
 # >拦截分流规则包含：滴滴出行/屏蔽IOS系统升级
 
@@ -3525,6 +3525,38 @@ HOST-SUFFIX,meituan.net,direct
 HOST-SUFFIX,mtyun.com,direct
 HOST-SUFFIX,neixin.cn,direct
 HOST-SUFFIX,sankuai.com,direct
+
+# >携程
+HOST-SUFFIX,c-ctrip.com,direct
+HOST-SUFFIX,colinker.com,direct
+HOST-SUFFIX,ctrip.cn,direct
+HOST-SUFFIX,ctrip.co.id,direct
+HOST-SUFFIX,ctrip.co.kr,direct
+HOST-SUFFIX,ctrip.co.th,direct
+HOST-SUFFIX,ctrip.com,direct
+HOST-SUFFIX,ctrip.com.hk,direct
+HOST-SUFFIX,ctrip.my,direct
+HOST-SUFFIX,ctrip.sg,direct
+HOST-SUFFIX,ctripbiz.com,direct
+HOST-SUFFIX,ctripbuy.hk,direct
+HOST-SUFFIX,ctripteam.com,direct
+HOST-SUFFIX,doticloud.com,direct
+HOST-SUFFIX,easytrip.com,direct
+HOST-SUFFIX,hhtravel.com,direct
+HOST-SUFFIX,hhtravel.com.tw,direct
+HOST-SUFFIX,izuchebao.com,direct
+HOST-SUFFIX,lvtds.com,direct
+HOST-SUFFIX,shuntu.cn,direct
+HOST-SUFFIX,skysea.com,direct
+HOST-SUFFIX,suanya.cn,direct
+HOST-SUFFIX,suanya.com,direct
+HOST-SUFFIX,tieyou.com,direct
+HOST-SUFFIX,toptown.cn,direct
+HOST-SUFFIX,toursbms.com,direct
+HOST-SUFFIX,trip.com,direct
+HOST-SUFFIX,tripcdn.com,direct
+HOST-SUFFIX,vipdlt.com,direct
+
 
 # >国外分流规则
 
