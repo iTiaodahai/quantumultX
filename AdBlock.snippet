@@ -66,7 +66,6 @@
 ^https?:\/\/api\.zhihu\.com\/(comment_v5\/)?(answers|comments?|articles|pins)\/\d+\/(root_|child_)?comments? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 消息页 - 折叠官方消息、屏蔽营销消息
 ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message) url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
 # 回答页 - 内容优化，付费、营销、推广内容文首提醒
 ^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 回答页 - 屏蔽下翻出现的黑名单用户的回答
@@ -77,8 +76,6 @@
 ^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists?(\?|\/) url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 搜索页 - 去除预置广告
 ^https?:\/\/api\.zhihu\.com\/search\/preset_words\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-
-hostname = 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226
 
 ################################################################################################################################################################
 # >滴滴出行去广告
@@ -98,13 +95,9 @@ hostname = 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,ww
 ^https:\/\/api\.udache\.com\/gulfstream\/pre-sale\/v1\/other\/pGetSceneList url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
 ^https:\/\/conf\.diditaxi\.com\.cn\/ota\/na\/yuantu\/infoList url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
 
-hostname = hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn ,api.udache.com ,123.207.209.*, 112.53.55.225,120.241.142.*,120.241.143.*,116.85.2.*,139.199.240.84
-
 ################################################################################################################################################################
 # >微博去广告
 # >引用来源：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet
-
-hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api.weibo.cn, sdkapp.uve.weibo.com
 
 # 似乎没用的请求，收集用户信息
 ^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload) Weibo url-and-header script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
@@ -172,5 +165,7 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 # DualSubs.YouTubeMusic.Translate.Lyrics.response.proto
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js
 
+################################################################################################################################################################
 #[MITM]
-hostname = www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
+hostname = 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226, hd.xiaojukeji.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn ,api.udache.com ,123.207.209.*, 112.53.55.225,120.241.142.*,120.241.143.*,116.85.2.*,139.199.240.84, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api.weibo.cn, sdkapp.uve.weibo.com
+, www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
