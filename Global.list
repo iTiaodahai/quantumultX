@@ -1,5 +1,6 @@
-# >国内分流规则包含：WeChta/Apple/滴滴出行
+# >国内分流规则包含：WeChta/Apple
 # >国外分流规则包含：Google/YouTube/Talkatone/Telegram/Twitter/Twitch/OpenAI/Netflix/Microsoft/PayPal/Github/Facebook/Instagram/Disney
+# >拦截分流规则包含：滴滴出行/屏蔽IOS系统升级
 
 # >国内直连分流规则
 
@@ -1916,10 +1917,6 @@ IP-CIDR,198.183.17.0/24,苹果服务
 IP-CIDR,205.180.175.0/24,苹果服务
 IP-CIDR,63.92.224.0/19,苹果服务
 IP-CIDR,65.199.22.0/23,苹果服务
-
-# >滴滴出行
-IP-CIDR,123.207.209.60/32,广告拦截
-IP-CIDR,123.207.209.39/32,广告拦截
 
 # >国外分流规则
 
@@ -5956,3 +5953,15 @@ HOST-SUFFIX,thisispolaris.com,Disney
 HOST-SUFFIX,watchdisneyfe.com,Disney
 HOST-SUFFIX,watchespn.com,Disney
 USER-AGENT,Disney+*,Disney
+
+# >拦截分流规则
+
+# >滴滴出行
+
+IP-CIDR,123.207.209.60/32,广告拦截
+IP-CIDR,123.207.209.39/32,广告拦截
+
+# >屏蔽IOS系统升级
+host, mesu.apple.com,reject
+host, gdmf.apple.com,reject
+host, updates-http.cdn-apple.com,reject
