@@ -1,4 +1,4 @@
-# >广告屏蔽:知乎/滴滴出行/微博
+# >广告屏蔽:知乎/滴滴出行/微博/YouTube
 
 ################################################################################################################################################################
 # >知乎去广告
@@ -137,4 +137,57 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 ^https://new.vip.weibo.cn/littleskin/preview Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 # 解锁微博会员APP图标
 ^https?://new\.vip\.weibo\.cn/aj/appicon/list Weibo url-and-header script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js
+
+################################################################################################################################################################
+# >YouTube双语字幕&YouTube去广告&画中画
+# >引用来源：https://raw.githubusercontent.com/DualSubs/YouTube/main/modules/DualSubs.YouTube.snippet
+# >引用来源：https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/YoutubeAds.conf
+
+^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$ url reject-dict
+#[Script]
+# ======= YouTube ======= #
+# DualSubs.YouTube.Player.request.json
+^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*) url script-request-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js
+# DualSubs.YouTube.Player.response.json
+^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*) url script-response-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js
+# DualSubs.YouTube.Player.request.proto
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?(.*) url script-request-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js
+# DualSubs.YouTube.Player.response.proto
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?(.*) url script-response-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js
+# DualSubs.YouTube.GetWatch.response.proto
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/get_watch\?(.*) url script-response-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js
+# DualSubs.YouTube.TimedText.request
+^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext url script-request-header https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js
+# DualSubs.YouTube.Composite.TimedText.response
+^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Composite.Subtitles.response.js
+# DualSubs.YouTube.Translate.TimedText.response
+^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js
+
+# ======= YouTube Music ======= #
+# DualSubs.YouTubeMusic.Browse.request.json
+^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*) url script-request-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js
+# DualSubs.YouTube.Browse.request.proto
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*) url script-request-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js
+# DualSubs.YouTubeMusic.Translate.Lyrics.response.json
+^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js
+# DualSubs.YouTubeMusic.Translate.Lyrics.response.proto
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js
+
+# ======= 视频广告请求 ======= #
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
+
+
+# ======= 视频PIP|后台播放|瀑布流|搜索页|播放页|短视频|贴片广告  ======= #
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch) url script-request-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js
+
+
+# ======= 通用广告请求 ======= #
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
+
+#[MITM]
+hostname = www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com, s.youtube.com,-redirector*.googlevideo.com, *.googlevideo.com
 
