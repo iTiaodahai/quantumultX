@@ -1,4 +1,4 @@
-# >国内分流规则包含：WeChta/Apple/滴滴出行/高德地图/阿里/
+# >国内分流规则包含：WeChta/Apple/滴滴出行/高德地图/阿里/京东/美团
 # >国外分流规则包含：Google/YouTube/Talkatone/Telegram/Twitter/Twitch/OpenAI/Netflix/Microsoft/PayPal/Github/Facebook/Instagram/Disney
 # >拦截分流规则包含：滴滴出行/屏蔽IOS系统升级
 
@@ -3515,6 +3515,16 @@ HOST-SUFFIX,yihaomall.com,direct
 HOST-SUFFIX,yixun.com,direct
 HOST-SUFFIX,yiyaojd.com,direct
 HOST-SUFFIX,yizhitou.com,direct
+
+# >美团
+
+HOST-SUFFIX,dianping.com,direct
+HOST-SUFFIX,maoyan.com,direct
+HOST-SUFFIX,meituan.com,direct
+HOST-SUFFIX,meituan.net,direct
+HOST-SUFFIX,mtyun.com,direct
+HOST-SUFFIX,neixin.cn,direct
+HOST-SUFFIX,sankuai.com,direct
 
 # >国外分流规则
 
