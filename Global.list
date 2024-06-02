@@ -1,4 +1,4 @@
-# >国内分流规则包含：WeChta/Apple/国内分流自定义
+# >国内分流规则包含：WeChta/Apple/滴滴出行
 # >国外分流规则包含：Google/YouTube/Talkatone/Telegram/Twitter/Twitch/OpenAI/Netflix/Microsoft/PayPal/Github/Facebook/Instagram/Disney
 # >拦截分流规则包含：滴滴出行/屏蔽IOS系统升级
 
@@ -1918,8 +1918,30 @@ IP-CIDR,205.180.175.0/24,苹果服务
 IP-CIDR,63.92.224.0/19,苹果服务
 IP-CIDR,65.199.22.0/23,苹果服务
 
-# >国内分流自定义
-HOST-SUFFIX,taobao.com,direct
+# >滴滴出行
+HOST-SUFFIX,apptaxi.com.cn,direct
+HOST-SUFFIX,cxyule.com,direct
+HOST-SUFFIX,didi-food.com,direct
+HOST-SUFFIX,didi.cn,direct
+HOST-SUFFIX,didi.xin,direct
+HOST-SUFFIX,didialift.com,direct
+HOST-SUFFIX,didiapp.net.cn,direct
+HOST-SUFFIX,didiaustralia.blog,direct
+HOST-SUFFIX,didichuxing.com,direct
+HOST-SUFFIX,didiglobal.com,direct
+HOST-SUFFIX,didimobility.co.jp,direct
+HOST-SUFFIX,didimobility.com,direct
+HOST-SUFFIX,didiopenapi.com,direct
+HOST-SUFFIX,didiqiche.com,direct
+HOST-SUFFIX,didistatic.com,direct
+HOST-SUFFIX,diditaxi.com,direct
+HOST-SUFFIX,diditaxi.com.cn,direct
+HOST-SUFFIX,didiwuxian.com,direct
+HOST-SUFFIX,didiyun.com,direct
+HOST-SUFFIX,didiyun.org,direct
+HOST-SUFFIX,didiyunapi.com,direct
+HOST-SUFFIX,juyanwenjuan.com,direct
+HOST-SUFFIX,udache.com,direct
 HOST-SUFFIX,xiaojuchefu.cn,direct
 HOST-SUFFIX,xiaojukeji.com,direct
 
