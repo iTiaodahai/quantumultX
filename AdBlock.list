@@ -680,3 +680,9 @@ HOST-SUFFIX,meituangov.cn,广告拦截
 HOST-SUFFIX,wmlog.meituan.com,广告拦截
 HOST-SUFFIX,analytics.meituan.net,广告拦截
 HOST-SUFFIX,report.meituan.com,广告拦截
+HOST,ma-adx.ctrip.com,广告拦截
+HOST,u.ctrip.com,广告拦截
+HOST-SUFFIX,ctripcorp.com,广告拦截
+HOST-SUFFIX,spasmodictripscontemplate.com,广告拦截
+HOST-SUFFIX,ctripatm.cn,广告拦截
+HOST-SUFFIX,video.c-ctrip.com,广告拦截
