@@ -686,3 +686,6 @@ HOST-SUFFIX,ctripcorp.com,广告拦截
 HOST-SUFFIX,spasmodictripscontemplate.com,广告拦截
 HOST-SUFFIX,ctripatm.cn,广告拦截
 HOST-SUFFIX,video.c-ctrip.com,广告拦截
+HOST,track.afcpatrk.com,广告拦截
+HOST-SUFFIX,affcpatrk.com,广告拦截
+HOST-SUFFIX,cpatrk.net,广告拦截
