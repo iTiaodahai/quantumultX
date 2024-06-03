@@ -693,6 +693,7 @@ HOST,mig.str.mdt.qq.com,广告拦截
 HOST,mtt.eve.mdt.qq.com,广告拦截
 HOST,mtt.str.mdt.qq.com,广告拦截
 HOST,mdt.qq.com,广告拦截
+HOST,sq.bls.mdt.qq.com,广告拦截
 HOST-SUFFIX,oth.eve.mdt.qq.com,广告拦截
 HOST-SUFFIX,oth.str.mdt.qq.com,广告拦截
 HOST-SUFFIX,oth.update.mdt.qq.com,广告拦截
