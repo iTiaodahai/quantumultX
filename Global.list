@@ -7,6 +7,7 @@
 
 HOST,apd-pcdnwxlogin.teg.tencent-cloud.net,direct
 HOST,btrace.qq.com,direct
+HOST,www.qq.com,direct
 HOST,dl.wechat.com,direct
 HOST,dldir1.qq.com,direct
 HOST,sgfindershort.wechat.com,direct
