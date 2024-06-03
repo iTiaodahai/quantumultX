@@ -1,8 +1,4 @@
-#屏蔽广告自用精简合集
-#HOST=157
-#HOST-SUFFIX=489
-#HOST-KEYWORD=28
-#总计=674
+# >屏蔽广告自用精简合集
 
 HOST,h-adashx4yt.ut.taobao.com,广告拦截
 HOST,sjarvis.taobao.com,广告拦截
