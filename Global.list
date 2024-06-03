@@ -3567,7 +3567,6 @@ HOST-KEYWORD,5721004,direct
 
 
 # >国外分流规则
-
 # >Google&YouTube
 
 HOST,clientservices.googleapis.com,谷歌服务
@@ -7603,7 +7602,6 @@ HOST-SUFFIX,watchespn.com,Disney
 USER-AGENT,Disney+*,Disney
 
 # >拦截分流规则
-
 # >滴滴出行
 
 IP-CIDR,123.207.209.60/32,广告拦截
