@@ -3562,7 +3562,6 @@ HOST-SUFFIX,vipdlt.com,direct
 # >自定义分流规则
 
 HOST-SUFFIX,timecn.cn,direct
-HOST,time.is,direct
 HOST-SUFFIX,5266ys.com,direct
 HOST-KEYWORD,5721004,direct
 
