@@ -1,6 +1,5 @@
-#!desc=按ASN分流中国大陆IP与域名直连
-#!author=VirgilClyne
-#!homepage=https://github.com/VirgilClyne/GetSomeFries/wiki/🌐-ASN
+# >ASN分流中国大陆IP与域名直连
+# 引用来源:https://github.com/VirgilClyne/GetSomeFries/wiki/🌐-ASN
 
 IP-ASN,4134 // 中国电信骨干网
 IP-ASN,4538 // 中国教育科研网络中心
