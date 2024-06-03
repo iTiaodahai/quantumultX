@@ -1,5 +1,5 @@
 # >广告屏蔽:知乎去广告/滴滴出行去广告/微博去广告/高德地图去广告/广告拦截合集/网页去广告
-# >功能:YouTube双语字幕/YouTube Music/YouTube去广告&画中画/Google搜索重定向
+# >功能:YouTube双语字幕/YouTube去广告&画中画/Google搜索重定向
 
 ################################################################################################################################################################
 # >知乎去广告
@@ -156,16 +156,6 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 # DualSubs.YouTube.Translate.TimedText.response
 ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js
 
-# YouTube Music
-# DualSubs.YouTubeMusic.Browse.request.json
-^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*) url script-request-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js
-# DualSubs.YouTube.Browse.request.proto
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*) url script-request-body https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js
-# DualSubs.YouTubeMusic.Translate.Lyrics.response.json
-^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js
-# DualSubs.YouTubeMusic.Translate.Lyrics.response.proto
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js
-
 # >YouTube去广告&画中画
 # >引用来源：https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/YoutubeAds.conf
 
@@ -173,11 +163,9 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
 
-
 # ======= 视频PIP|后台播放|瀑布流|搜索页|播放页|短视频|贴片广告  ======= #
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch) url script-request-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js
-
 
 # ======= 通用广告请求 ======= #
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
