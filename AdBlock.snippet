@@ -213,10 +213,6 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 ^https?:\/\/app-gw\.csdn\.net\/abtesting\/v2\/getList? url reject
 ^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement url reject
 
-# > 彩云天气
-^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url echo-response application/json echo-response https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json
-^https?:\/\/api\.caiyunapp\.com\/v1\/activity url reject-dict
-
 # > 饿了么
 ^https?:\/\/elemecdn\.com\/.+\/sitemap url reject
 ^https?:\/\/fuss10\.elemecdn\.com\/.+\/w\/640\/h\/\d{3,4} url reject
@@ -277,10 +273,6 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 # 美团订单详情页更多推荐
 ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends url reject
 
-# Talkatone
-^https?:\/\/alt-r\.my\.com\/mobile url reject-dict
-^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn url reject-img
-
 # > 腾讯视频
 ^https?:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ url reject
 ^https?:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ url reject
@@ -334,4 +326,4 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 
 ################################################################################################################################################################
 #[MITM]
-hostname = ad.12306.cn,gab.122.gov.cn,acs.m.taobao.com,amdc.m.taobao.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,grpc.biliapi.net,app-gw.csdn.net,gw.csdn.net,wrapper.cyapi.cn,api.caiyunapp.com,elemecdn.com,fuss10.elemecdn.com,cube.elemecdn.com,www1.elecfans.com,nr-op.elemecdn.com,amdc.m.taobao.com,acs.m.taobao.com,gw.alicdn.com,static.95508.com,v.icbc.com.cn,static.95508.com,mps.95508.com,napi.ithome.com,api.m.jd.com,dns.jd.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,www.meituan.net,flowplus.meituan.net,wmapi.meituan.net,apimobile.meituan.net,apimobile.meituan.com,alt-r.my.com,imgx.jampp.com,vv.video.qq.com,btrace.qq.com,api2.helper.qq.com,*.beacon.qq.com,mi.gdt.qq.com,lives.l.qq.com,imgcache.qq.com,mtteve.beacon.qq.com,vv.video.qq.com,ssl.kohsocialapp.qq.com,qt.qq.com,3gimg.qq.com,y.gtimg.cn,splashqqlive.gtimg.com,qzonestyle.gtimg.cn,discuz.gtimg.cn,bla.gtimg.com,mmgr.gtimg.com,bk.bingo.qq.com,mp.weixin.qq.com,weixin110.qq.com,security.wechat.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bcs.cmbchina.com,118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226,hd.xiaojukeji.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn ,api.udache.com ,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.2.*,139.199.240.84,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,new.vip.weibo.cn,*api.weibo.cn,sdkapp.uve.weibo.com,www.youtube.com,m.youtube.com,tv.youtube.com,music.youtube.com,youtubei.googleapis.com,-redirector*.googlevideo.com,*.googlevideo.com
+hostname = ad.12306.cn,gab.122.gov.cn,acs.m.taobao.com,amdc.m.taobao.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,grpc.biliapi.net,app-gw.csdn.net,gw.csdn.net,elemecdn.com,fuss10.elemecdn.com,cube.elemecdn.com,www1.elecfans.com,nr-op.elemecdn.com,amdc.m.taobao.com,acs.m.taobao.com,gw.alicdn.com,static.95508.com,v.icbc.com.cn,static.95508.com,mps.95508.com,napi.ithome.com,api.m.jd.com,dns.jd.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,www.meituan.net,flowplus.meituan.net,wmapi.meituan.net,apimobile.meituan.net,apimobile.meituan.com,vv.video.qq.com,btrace.qq.com,api2.helper.qq.com,*.beacon.qq.com,mi.gdt.qq.com,lives.l.qq.com,imgcache.qq.com,mtteve.beacon.qq.com,vv.video.qq.com,ssl.kohsocialapp.qq.com,qt.qq.com,3gimg.qq.com,y.gtimg.cn,splashqqlive.gtimg.com,qzonestyle.gtimg.cn,discuz.gtimg.cn,bla.gtimg.com,mmgr.gtimg.com,bk.bingo.qq.com,mp.weixin.qq.com,weixin110.qq.com,security.wechat.com,webappcfg.paas.cmbchina.com,mbasecc.bas.cmbchina.com,mbasecc.bcs.cmbchina.com,intellicc.bcs.cmbchina.com,118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226,hd.xiaojukeji.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn ,api.udache.com ,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.2.*,139.199.240.84,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,new.vip.weibo.cn,*api.weibo.cn,sdkapp.uve.weibo.com,www.youtube.com,m.youtube.com,tv.youtube.com,music.youtube.com,youtubei.googleapis.com,-redirector*.googlevideo.com,*.googlevideo.com
