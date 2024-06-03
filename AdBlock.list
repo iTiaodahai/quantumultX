@@ -505,6 +505,12 @@ HOST-SUFFIX,zhihucloud.xyz,广告拦截
 HOST-SUFFIX,zhihuiduijian.com,广告拦截
 HOST-SUFFIX,sibozhihui-lc.com,广告拦截
 HOST-SUFFIX,zhihu.xmcimg.com,广告拦截
+HOST,appcloud2.in.zhihu.com,广告拦截
+HOST,mqtt.zhihu.com,广告拦截
+HOST,sugar.zhihu.com,广告拦截
+USER-AGENT,AVOS*,广告拦截
+IP-CIDR,118.89.204.198/32,广告拦截
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,广告拦截
 HOST-SUFFIX,cm.ad.bilibili.com,广告拦截
 HOST-SUFFIX,cm.adcommon.bilibili.com,广告拦截
 HOST-SUFFIX,cm.bilibili.com,广告拦截
