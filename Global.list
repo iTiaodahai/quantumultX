@@ -7606,6 +7606,6 @@ IP-CIDR,123.207.209.60/32,广告拦截
 IP-CIDR,123.207.209.39/32,广告拦截
 
 # >屏蔽IOS系统升级
-host, mesu.apple.com,reject
-host, gdmf.apple.com,reject
-host, updates-http.cdn-apple.com,reject
+host, mesu.apple.com,系统更新
+host, gdmf.apple.com,系统更新
+host, updates-http.cdn-apple.com,系统更新
