@@ -1,21 +1,33 @@
-#!name=YouTube(Music)
-#!desc=YouTube(Music)去广告及翻译\n作者：@Maasea
-#!category=⚙️ ▸ NoAds
-#!arguments=屏蔽上传按钮:true,屏蔽选段按钮:true,字幕翻译语言:zh-Hans,歌词翻译语言:zh-Hans,脚本执行引擎:jsc,启用调试模式:false
-#!arguments-desc=- 屏蔽参数：[true, false] \n- 翻译参数：[语言代码, off] \n- 脚本引擎：[auto, jsc, webview]\n\n1. 语言代码遵循 Google Translate Languages Codes, 当填入 off 时关闭翻译\n2. 推荐使用 jsc 引擎，但你仍可以切换成 webview 体验 Surge 新特性\n3. 开启调试模式用于输出更多日志
-#引用来源:https://github.com/Repcz/Tool/blob/X/Surge/Module/NoAds/YouTube.sgmodule
+#!name=YouTube字幕
+#!desc=YouTube字幕&歌词增强及双语模块
+#!openUrl=http://boxjs.com/#/app/DualSubs.YouTube
+#!author=VirgilClyne
+#!homepage=https://github.com/DualSubs/YouTube
+#!manual=https://github.com/DualSubs/YouTube/wiki/🍿-DualSubs:-▶-YouTube
+#!icon=https://github.com/DualSubs/YouTube/raw/main/src/assets/icon_rounded.png
+#!category=🍿️ DualSubs
+#!arguments=AutoCC:true,ShowOnly:false
+#!arguments-desc=AutoCC: 自动显示字幕\nShowOnly: 只显示“自动翻译”字幕
 
 [Rule]
-AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
-AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
-
-[Map Local]
-^https?:\/\/redirector\.googlevideo\.com\/initplayback data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/blank.txt"
+URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJECT-TINYGIF
 
 [Script]
-youtube.request = type=http-request, pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body=true, binary-body-mode=true, engine={{{脚本执行引擎}}}, max-size=-1
+# YouTube
+DualSubs.YouTube.Player.request.json = type=http-request, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*), requires-body=1, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, argument=AutoCC={{{AutoCC}}}&ShowOnly={{{ShowOnly}}}
+DualSubs.YouTube.Player.response.json = type=http-response, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player\?(.*), requires-body=1, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, argument=AutoCC={{{AutoCC}}}&ShowOnly={{{ShowOnly}}}
+DualSubs.YouTube.Player.request.proto = type=http-request, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?(.*), requires-body=1, binary-body-mode=1, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, argument=AutoCC={{{AutoCC}}}&ShowOnly={{{ShowOnly}}}
+DualSubs.YouTube.Player.response.proto = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\?(.*), requires-body=1, binary-body-mode=1, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, argument=AutoCC={{{AutoCC}}}&ShowOnly={{{ShowOnly}}}
+DualSubs.YouTube.GetWatch.response.proto = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/get_watch\?(.*), requires-body=1, binary-body-mode=1, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, argument=AutoCC={{{AutoCC}}}&ShowOnly={{{ShowOnly}}}
+DualSubs.YouTube.TimedText.request = type=http-request, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*), requires-body=0, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, argument=AutoCC={{{AutoCC}}}&ShowOnly={{{ShowOnly}}}
+DualSubs.YouTube.Composite.TimedText.response = type=http-response, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External), requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/Composite.Subtitles.response.js, argument=
+DualSubs.YouTube.Translate.TimedText.response = type=http-response, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, argument=
 
-youtube.response = type=http-response, pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting), script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js, requires-body=true, binary-body-mode=true, engine={{{脚本执行引擎}}}, max-size=-1, argument="{"lyricLang":"{{{歌词翻译语言}}}","captionLang":"{{{字幕翻译语言}}}","blockUpload":{{{屏蔽上传按钮}}},"immersive":{{{屏蔽选段按钮}}},"debug":{{{启用调试模式}}}}"
+# YouTube Music
+DualSubs.YouTubeMusic.Browse.request.json = type=http-request, pattern=^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*), requires-body=1, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, argument=
+DualSubs.YouTube.Browse.request.proto = type=http-request, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*), requires-body=1, binary-body-mode=1, engine=webview, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, argument=
+DualSubs.YouTubeMusic.Translate.Lyrics.response.json = type=http-response, pattern=^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, argument=
+DualSubs.YouTubeMusic.Translate.Lyrics.response.proto = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate, requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, argument=
 
 [MITM]
-hostname = %APPEND% redirector.googlevideo.com, youtubei.googleapis.com
+hostname = %APPEND% www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
