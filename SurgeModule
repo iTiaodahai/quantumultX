@@ -1,6 +1,6 @@
 # > 模块：知乎去广告
 
-# > 知乎去广告
+#!name=知乎去广告
 [Rule]
 # 拦截开屏广告
 URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\?,REJECT
