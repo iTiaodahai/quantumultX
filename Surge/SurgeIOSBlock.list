@@ -1,4 +1,4 @@
 # >屏蔽IOS系统升级
-DOMAIN, mesu.apple.com,系统更新
-DOMAIN, gdmf.apple.com,系统更新
-DOMAIN, updates-http.cdn-apple.com,系统更新
+DOMAIN, mesu.apple.com
+DOMAIN, gdmf.apple.com
+DOMAIN, updates-http.cdn-apple.com
