@@ -100,8 +100,7 @@ i: &i {type: http, behavior: ipcidr, format: text, interval: 86400}
 
 proxy-providers:
   Subscribe: {<<: *p, path: ./proxy-providers/Sub.yaml, url: http://your-service-provider}
-    # 在此将"http://your-service-provider"替换为你的机场订阅，推荐使用 base64 或者 node list
-    # Sub-Store生成的链接,可以直接替换上述 url 引号中的部分,具体见 Sub-Store 教程         
+    # 在此将"http://your-service-provider"替换为你的机场订阅，推荐使用 base64 或者 node list        
                
 proxy-groups:
 
@@ -129,15 +128,15 @@ proxy-groups:
 
   #节点地区分组
 
-  - {name: 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
+  - {name: 香港节点, <<: *fallback, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
 
-  - {name: 美国节点, <<: *url-test, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png}
+  - {name: 美国节点, <<: *fallback, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png}
 
-  - {name: 新加坡节点, <<: *url-test, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png}
+  - {name: 新加坡节点, <<: *fallback, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png}
 
-  - {name: 日本节点, <<: *url-test, filter: "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png}
+  - {name: 日本节点, <<: *fallback, filter: "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png}
 
-  - {name: 台湾节点, <<: *url-test, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
+  - {name: 台湾节点, <<: *fallback, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
 
 rule-providers:
 
@@ -178,8 +177,6 @@ rule-providers:
   ProxyGFW: {<<: *c, path: ./rule-providers/ProxyGFW.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list}
  
 rules:
-  #- SCRIPT,quic,REJECT
-  #- RULE-SET,Download,DIRECT
   - RULE-SET,AD,广告拦截
   - RULE-SET,AI,OpenAI
   - RULE-SET,Apple,Apple
