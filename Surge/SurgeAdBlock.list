@@ -123,14 +123,14 @@ DOMAIN,adexpo.tencentmusic.com
 DOMAIN,ping.cloud.tencent.com
 DOMAIN,sensors.cloud.tencent.com
 DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
-DOMAIN-SUFFIX,ad.tencentmusic.com
+DOMAIN,ad.tencentmusic.com
 DOMAIN-SUFFIX,enlightencentury.com
 DOMAIN-SUFFIX,log.tpns.gz2.tencent.com
 DOMAIN-SUFFIX,tpstelemetry.tencent.com
 DOMAIN-SUFFIX,trace.zhiyan.tencent-cloud.net
 DOMAIN-SUFFIX,tencentmind.com
 DOMAIN-SUFFIX,tpns.tencent.com
-DOMAIN-SUFFIX,adstats.tencentmusic.com
+DOMAIN,adstats.tencentmusic.com
 DOMAIN,a.ac.qq.com
 DOMAIN,ad.browser.qq.com
 DOMAIN,ad.weixin.qq.com
