@@ -1358,3 +1358,15 @@ HOST-SUFFIX,mc7clurd09pla4nrtat7ion.com,reject
 HOST-SUFFIX,e67repidwnfu7gcha.com,reject
 HOST-SUFFIX,wuzbhjpvsf.com,reject
 HOST-SUFFIX,a.realsrv.com,reject
+# > QQ音乐广告
+host,tmeadcomm.y.qq.com,reject
+host,ad.tencentmusic.com,reject
+host,adstats.tencentmusic.com,reject
+host,tmead.y.qq.com,reject
+host-suffix,rqd.qq.com,reject
+host-suffix,wup.imtt.qq.com,reject
+host-suffix,gdt.qq.com, reject
+host-suffix,android.rqd.qq.com,reject
+host-suffix,e.qq.com,reject
+host-suffix,beacon.qq.com,reject
+host-suffix,v.gdt.qq.com,reject
