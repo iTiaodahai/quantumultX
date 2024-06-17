@@ -1,6 +1,5 @@
 # >广告屏蔽:知乎去广告/滴滴出行去广告/微博去广告/高德地图去广告/App广告拦截合集
 # >功能:YouTube双语字幕/YouTube Music/Google搜索重定向/网页去广告
-# >爱奇艺/腾讯视频/优酷
 ################################################################################################################################################################
 # >广告屏蔽
 # >知乎去广告
@@ -360,66 +359,6 @@ Missav(missav.com) = type=http-response , script-path=https://limbopro.com/Adgua
 内容农场(www.google.com|com.hk) = type=http-response , script-path=https://limbopro.com/Adguard/Adblock4limbo.js , pattern=^https?:\/\/(www\.google)(\.\w{2,4}){1,2}\/(search\?|\?sa=|\?FORM)(?!.*?(apps=)) , max-size=0 , requires-body=true , timeout=10 , script-update-interval=0 , enable=true
 
 ################################################################################################################################################################
-# >爱奇艺/腾讯视频/优酷
-# >引用来源：https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
-
-# 爱奇艺 //-i.vip.iqiyi.com, *.iqiyi.com
-# 播放页开通会员提示
-^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? url reject-dict
-# 首页信息流广告
-^http:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-^http:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-^https:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-^https:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 播放详情页
-^https:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 搜索页列表
-^https:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 评论区
-^https:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 我的页面菜单
-^https:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 首页左上角天气
-^https:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 通用控制,各tab页二楼
-^https:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 播放页多余动效
-^https:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? url reject-dict
-# 播放页升级白金会员按钮
-^https:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? url reject-dict
-# 底部tab,顶部tab
-^https:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 青少年弹窗
-^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? url reject-dict
-# 搜索框填充词
-^https:\/\/search\.video\.iqiyi\.com\/q\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 开屏广告,播放广告
-^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-
-# 腾讯视频 //vv.video.qq.com
-^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ url reject
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ url reject
-^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ url reject
-^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind url reject-dict
-^https?:\/\/vv\.video\.qq\.com\/getvinfo url request-body &sppreviewtype=\d(.*)&spsrt=\d request-body &sppreviewtype=0$1&spsrt=0
-
-# 优酷 //acs.youku.com, push.m.youku.com, un-acs.youku.com
-# 播放详情页,首页信息流,顶部tab,我的页面,评论区
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 底部tab
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 青少年模式弹窗
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 播放页弹窗动图
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) url reject-dict
-# 搜索列表
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 热剧弹窗
-^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 开屏广告
-^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-
-################################################################################################################################################################
 #[MITM]
 #*.jable.tv,en.jable.tv,jable.tv,
-hostname = 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226,hd.xiaojukeji.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn,api.udache.com,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.2.*,139.199.240.84,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,new.vip.weibo.cn,*api.weibo.cn,sdkapp.uve.weibo.com,*.amap.com,ad.12306.cn,gab.122.gov.cn,acs.m.taobao.com,heic.alicdn.com,guide-acs.m.taobao.com,poplayer.template.alibaba.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,grpc.biliapi.net,elemecdn.com,fuss10.elemecdn.com,cube.elemecdn.com,www1.elecfans.com,nr-op.elemecdn.com,amdc.m.taobao.com,gw.alicdn.com,api.m.jd.com,dns.jd.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,www.meituan.net,flowplus.meituan.net,wmapi.meituan.net,apimobile.meituan.net,apimobile.meituan.com,vv.video.qq.com,btrace.qq.com,api2.helper.qq.com,*.beacon.qq.com,mi.gdt.qq.com,lives.l.qq.com,imgcache.qq.com,mtteve.beacon.qq.com,ssl.kohsocialapp.qq.com,qt.qq.com,3gimg.qq.com,y.gtimg.cn,splashqqlive.gtimg.com,qzonestyle.gtimg.cn,discuz.gtimg.cn,bla.gtimg.com,mmgr.gtimg.com,bk.bingo.qq.com,mp.weixin.qq.com,weixin110.qq.com,security.wechat.com,www.youtube.com,m.youtube.com,tv.youtube.com,music.youtube.com,youtubei.googleapis.com,-redirector*.googlevideo.com,*.googlevideo.com,missav.com,cn.bing.com,www.bing.com,www.google.com,www.google.com.hk,www.baidu.com,m.baidu.com,zhidao.baidu.com,www.google.cn,www.g.cn,-i.vip.iqiyi.com,*.iqiyi.com,acs.youku.com,push.m.youku.com,un-acs.youku.com
+hostname = 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226,hd.xiaojukeji.com,common.diditaxi.com.cn,freight.xiaojukeji.com,daijia.kuaidadi.com,ct.xiaojukeji.com,res.xiaojukeji.com,conf.diditaxi.com.cn,api.udache.com,123.207.209.*,112.53.55.225,120.241.142.*,120.241.143.*,116.85.2.*,139.199.240.84,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,new.vip.weibo.cn,*api.weibo.cn,sdkapp.uve.weibo.com,*.amap.com,ad.12306.cn,gab.122.gov.cn,acs.m.taobao.com,heic.alicdn.com,guide-acs.m.taobao.com,poplayer.template.alibaba.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,grpc.biliapi.net,elemecdn.com,fuss10.elemecdn.com,cube.elemecdn.com,www1.elecfans.com,nr-op.elemecdn.com,amdc.m.taobao.com,gw.alicdn.com,api.m.jd.com,dns.jd.com,img.meituan.net,p*.meituan.net,s3plus.meituan.net,www.meituan.net,flowplus.meituan.net,wmapi.meituan.net,apimobile.meituan.net,apimobile.meituan.com,vv.video.qq.com,btrace.qq.com,api2.helper.qq.com,*.beacon.qq.com,mi.gdt.qq.com,lives.l.qq.com,imgcache.qq.com,mtteve.beacon.qq.com,ssl.kohsocialapp.qq.com,qt.qq.com,3gimg.qq.com,y.gtimg.cn,splashqqlive.gtimg.com,qzonestyle.gtimg.cn,discuz.gtimg.cn,bla.gtimg.com,mmgr.gtimg.com,bk.bingo.qq.com,mp.weixin.qq.com,weixin110.qq.com,security.wechat.com,www.youtube.com,m.youtube.com,tv.youtube.com,music.youtube.com,youtubei.googleapis.com,-redirector*.googlevideo.com,*.googlevideo.com,missav.com,cn.bing.com,www.bing.com,www.google.com,www.google.com.hk,www.baidu.com,m.baidu.com,zhidao.baidu.com,www.google.cn,www.g.cn
