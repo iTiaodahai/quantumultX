@@ -1,7 +1,7 @@
 # >屏蔽广告自用精简合集
 
 #####################################################
-3引用来源：https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
+#引用来源：https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 # 爱奇艺
 DOMAIN,api.iqiyi.com
 # 优酷 & 菜鸟
