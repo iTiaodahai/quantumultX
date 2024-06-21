@@ -689,14 +689,7 @@ HOST-SUFFIX,video.c-ctrip.com,reject
 HOST,track.afcpatrk.com,reject
 HOST-SUFFIX,affcpatrk.com,reject
 HOST-SUFFIX,cpatrk.net,reject
-HOST,mig.str.mdt.qq.com,reject
-HOST,mtt.eve.mdt.qq.com,reject
-HOST,mtt.str.mdt.qq.com,reject
-HOST,mdt.qq.com,reject
 HOST,sq.bls.mdt.qq.com,reject
-HOST-SUFFIX,oth.eve.mdt.qq.com,reject
-HOST-SUFFIX,oth.str.mdt.qq.com,reject
-HOST-SUFFIX,oth.update.mdt.qq.com,reject
 HOST-KEYWORD,admarvel,reject
 HOST-KEYWORD,admaster,reject
 HOST-KEYWORD,adsage,reject
@@ -760,7 +753,6 @@ HOST-SUFFIX,ader.mobi,reject
 HOST-SUFFIX,adform.net,reject
 HOST-SUFFIX,adfuture.cn,reject
 HOST-SUFFIX,adhouyi.com,reject
-HOST-SUFFIX,adinfuse.com,reject
 HOST-SUFFIX,adirects.com,reject
 HOST-SUFFIX,adjust.io,reject
 HOST-SUFFIX,adkmob.com,reject
@@ -1240,7 +1232,6 @@ HOST-SUFFIX,rubiconproject.com,reject
 HOST-SUFFIX,sape.ru,reject
 HOST-SUFFIX,scorecardresearch.com,reject
 HOST-SUFFIX,segment.com,reject
-HOST-SUFFIX,serving-sys.com,reject
 HOST-SUFFIX,sharethis.com,reject
 HOST-SUFFIX,smaato.com,reject
 HOST-SUFFIX,smaato.net,reject
@@ -1326,7 +1317,6 @@ HOST-SUFFIX,ads.internal.unity3d.com,reject
 HOST-SUFFIX,ads.prd.ie.internal.unity3d.com,reject
 HOST-SUFFIX,unityads.unity3d.com,reject
 HOST-SUFFIX,a.shukriya90.com,reject
-HOST-SUFFIX,a.shukriya90.com,reject
 HOST-SUFFIX,creative.xlviirdr.com,reject
 HOST-SUFFIX,realsrv.com,reject
 HOST-SUFFIX,asewlfjqwlflkew.com,reject
@@ -1352,10 +1342,8 @@ HOST-SUFFIX,alexametrics.com,reject
 HOST-SUFFIX,designslicensedeep.com,reject
 HOST-SUFFIX,a.bestcontentfood.top,reject
 HOST-SUFFIX,tsyndicate.com,reject
-HOST-SUFFIX,cashewsforlife208.com,reject
 HOST-SUFFIX,e67repidwnfu7gcha.com,reject
 HOST-SUFFIX,mc7clurd09pla4nrtat7ion.com,reject
-HOST-SUFFIX,e67repidwnfu7gcha.com,reject
 HOST-SUFFIX,wuzbhjpvsf.com,reject
 HOST-SUFFIX,a.realsrv.com,reject
 HOST-SUFFIX,android.rqd.qq.com,reject
