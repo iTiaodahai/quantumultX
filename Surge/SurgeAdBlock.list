@@ -1,7 +1,5 @@
 # >屏蔽广告自用精简合集
 
-#####################################################
-#引用来源：https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 # 腾讯
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,info4.video.qq.com
@@ -18,7 +16,6 @@ DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
 DOMAIN-KEYWORD,trace.video.qq.com
 IP-CIDR,47.110.187.87/32
-#####################################################
 
 # >淘宝
 DOMAIN,h-adashx4yt.ut.taobao.com
@@ -329,7 +326,6 @@ DOMAIN-SUFFIX,jingjia.qq.com
 DOMAIN-SUFFIX,jpush.html5.qq.com
 DOMAIN-SUFFIX,jqmt.qq.com
 DOMAIN-SUFFIX,jsqmt.qq.com
-DOMAIN-SUFFIX,l.qq.com
 DOMAIN-SUFFIX,livep.l.ott.video.qq.com
 DOMAIN-SUFFIX,lives.l.ott.video.qq.com
 DOMAIN-SUFFIX,log.tbs.qq.com
@@ -353,7 +349,6 @@ DOMAIN-SUFFIX,novelsns.html5.qq.com
 DOMAIN-SUFFIX,oollttqq.com
 DOMAIN-SUFFIX,openapi.guanjia.qq.com
 DOMAIN-SUFFIX,oth.eve.mdt.qq.com
-DOMAIN-SUFFIX,oth.str.mdt.qq.com
 DOMAIN-SUFFIX,oth.update.mdt.qq.com
 DOMAIN-SUFFIX,p.store.qq.com
 DOMAIN-SUFFIX,pcbrowser.dd.qq.com
@@ -413,13 +408,7 @@ DOMAIN-SUFFIX,sngmta.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 DOMAIN-KEYWORD,_vmind.qqvideo.tc.qq.com
 DOMAIN-KEYWORD,android.bugly.qq.com
-DOMAIN,mig.str.mdt.qq.com
-DOMAIN,mtt.eve.mdt.qq.com
-DOMAIN,mtt.str.mdt.qq.com
-DOMAIN,mdt.qq.com
 DOMAIN,sq.bls.mdt.qq.com
-DOMAIN-SUFFIX,oth.eve.mdt.qq.com
-DOMAIN-SUFFIX,oth.update.mdt.qq.com
 DOMAIN,ping.cloud.tencent.com
 DOMAIN,sensors.cloud.tencent.com
 DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
