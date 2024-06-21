@@ -166,10 +166,6 @@ DOMAIN,p.l.qq.com
 DOMAIN,us.l.qq.com
 DOMAIN,tangram.e.qq.com
 
-# >滴滴出行
-IP-CIDR,123.207.209.60/32
-IP-CIDR,123.207.209.39/32
-
 # >腾讯系
 DOMAIN,a.ac.qq.com
 DOMAIN,ad.browser.qq.com
